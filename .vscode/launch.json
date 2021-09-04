@@ -1,0 +1,55 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "provider",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/provider-product-service/src/bin/Debug/net5.0/Provider.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/provider-product-service/src",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\\\bNow listening on:\\\\s+(https?://\\\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": "consumer-price",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/consumer-price-service/src",
+            "port": 3002,
+            "env": {},
+            "args": []
+        },
+        {
+            "name": "consumer-search",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/consumer-search-service/src",
+            "port": 3003,
+            "env": {},
+            "args": []
+        },
+    ],
+    "compounds": [
+        {
+            "name": "All",
+            "configurations": [
+                "provider",
+                "consumer-price",
+                "consumer-search"
+            ]
+        }
+    ]
+}

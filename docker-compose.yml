@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+  postgres:
+    image: postgres:10.6-alpine
+    container_name: cdc_postgres
+    ports:
+      - "5492:5432"
+    environment:
+      - POSTGRES_USER=dbadmin 
+      - POSTGRES_PASSWORD=dbadmin
+      
+  broker:
+    container_name: cdc_pact_broker
+    image: pactfoundation/pact-broker:latest
+    ports:
+      - 9292:9292
+    environment:
+      - PACT_BROKER_DATABASE_URL=postgresql://dbadmin:dbadmin@postgres:5432/postgres
+      - PACT_BROKER_BASIC_AUTH_USERNAME=admin
+      - PACT_BROKER_BASIC_AUTH_PASSWORD=admin
+      - PACT_BROKER_LOG_LEVEL=INFO
+      - PACT_BROKER_PORT=9292
+    depends_on:
+      - postgres

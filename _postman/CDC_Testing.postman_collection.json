@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "2d4e3217-3933-4f07-b696-97f202029281",
+		"name": "CDC_Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Provider",
+			"item": [
+				{
+					"name": "provider-get-products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InN1YWRldkBnbWFpbC5jb20iLCJ1c2VyX2lkIjoiMjJkMWQwYWUtYWEyNi00Y2JiLTlhZWMtNzY0MDE4MGZmNDViIiwibmJmIjoxNjE1NTc0NzY1LCJleHAiOjE2MTU2NjExNjUsImlhdCI6MTYxNTU3NDc2NSwiaXNzIjoibG9jYWxob3N0IiwiYXVkIjoiU3VhdCBLw5ZTRSJ9.qLV4qNYZM_ouyWulEPBEaNy2Bg3aK7lLnLLoKkQ5fBM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "provider-get-single-product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InN1YWRldkBnbWFpbC5jb20iLCJ1c2VyX2lkIjoiMjJkMWQwYWUtYWEyNi00Y2JiLTlhZWMtNzY0MDE4MGZmNDViIiwibmJmIjoxNjE1NTc0NzY1LCJleHAiOjE2MTU2NjExNjUsImlhdCI6MTYxNTU3NDc2NSwiaXNzIjoibG9jYWxob3N0IiwiYXVkIjoiU3VhdCBLw5ZTRSJ9.qLV4qNYZM_ouyWulEPBEaNy2Bg3aK7lLnLLoKkQ5fBM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "provider-search-products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InN1YWRldkBnbWFpbC5jb20iLCJ1c2VyX2lkIjoiMjJkMWQwYWUtYWEyNi00Y2JiLTlhZWMtNzY0MDE4MGZmNDViIiwibmJmIjoxNjE1NTc0NzY1LCJleHAiOjE2MTU2NjExNjUsImlhdCI6MTYxNTU3NDc2NSwiaXNzIjoibG9jYWxob3N0IiwiYXVkIjoiU3VhdCBLw5ZTRSJ9.qLV4qNYZM_ouyWulEPBEaNy2Bg3aK7lLnLLoKkQ5fBM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/products/search?keyword=mo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"products",
+								"search"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "mo"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Consumer",
+			"item": [
+				{
+					"name": "consumer-price_get-product-price",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InN1YWRldkBnbWFpbC5jb20iLCJ1c2VyX2lkIjoiMjJkMWQwYWUtYWEyNi00Y2JiLTlhZWMtNzY0MDE4MGZmNDViIiwibmJmIjoxNjE1NTc0NzY1LCJleHAiOjE2MTU2NjExNjUsImlhdCI6MTYxNTU3NDc2NSwiaXNzIjoibG9jYWxob3N0IiwiYXVkIjoiU3VhdCBLw5ZTRSJ9.qLV4qNYZM_ouyWulEPBEaNy2Bg3aK7lLnLLoKkQ5fBM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/api/product-prices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"product-prices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consumer-price_get-single-product-price",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InN1YWRldkBnbWFpbC5jb20iLCJ1c2VyX2lkIjoiMjJkMWQwYWUtYWEyNi00Y2JiLTlhZWMtNzY0MDE4MGZmNDViIiwibmJmIjoxNjE1NTc0NzY1LCJleHAiOjE2MTU2NjExNjUsImlhdCI6MTYxNTU3NDc2NSwiaXNzIjoibG9jYWxob3N0IiwiYXVkIjoiU3VhdCBLw5ZTRSJ9.qLV4qNYZM_ouyWulEPBEaNy2Bg3aK7lLnLLoKkQ5fBM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/api/product-price/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"product-price",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consumer-search_search-products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InN1YWRldkBnbWFpbC5jb20iLCJ1c2VyX2lkIjoiMjJkMWQwYWUtYWEyNi00Y2JiLTlhZWMtNzY0MDE4MGZmNDViIiwibmJmIjoxNjE1NTc0NzY1LCJleHAiOjE2MTU2NjExNjUsImlhdCI6MTYxNTU3NDc2NSwiaXNzIjoibG9jYWxob3N0IiwiYXVkIjoiU3VhdCBLw5ZTRSJ9.qLV4qNYZM_ouyWulEPBEaNy2Bg3aK7lLnLLoKkQ5fBM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3003/api/products/search?keyword=mo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"api",
+								"products",
+								"search"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "mo"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
