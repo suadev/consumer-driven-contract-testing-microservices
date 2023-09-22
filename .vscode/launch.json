@@ -6,7 +6,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/provider-product-service/src/bin/Debug/net5.0/Provider.dll",
+            "program": "${workspaceFolder}/provider-product-service/src/bin/Debug/net6.0/Provider.dll",
             "args": [],
             "cwd": "${workspaceFolder}/provider-product-service/src",
             "stopAtEntry": false,
