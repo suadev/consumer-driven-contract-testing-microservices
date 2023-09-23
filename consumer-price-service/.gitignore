@@ -18,3 +18,5 @@ __debug_bin
 
 
 _pact_consumer_logs/
+
+.DS_Store

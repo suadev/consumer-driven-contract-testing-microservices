@@ -25,21 +25,15 @@
             "name": "consumer-price",
             "type": "go",
             "request": "launch",
-            "mode": "auto",
+            "mode": "debug",
             "program": "${workspaceFolder}/consumer-price-service/src",
-            "port": 3002,
-            "env": {},
-            "args": []
         },
         {
             "name": "consumer-search",
             "type": "go",
             "request": "launch",
-            "mode": "auto",
+            "mode": "debug",
             "program": "${workspaceFolder}/consumer-search-service/src",
-            "port": 3003,
-            "env": {},
-            "args": []
         },
     ],
     "compounds": [
